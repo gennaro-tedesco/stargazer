@@ -6,8 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">list github repositories with :star: counts</h4>
-
+<h4 align="center">list GitHub repositories with :star: counts</h4>
 <p align="center">
   <a href="#Installation">Installation</a> •
   <a href="#Usage">Usage</a> •
