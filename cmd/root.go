@@ -1,5 +1,3 @@
-// this file contains the command line interface for the application
-
 package cmd
 
 import (
@@ -8,16 +6,19 @@ import (
 
 var rootCmd = &cobra.Command{
 	Use:   "stargazer",
-	Short: "list github repositories with star count",
-	Long:  "list github repositories with star count",
+	Args:  cobra.ExactArgs(1),
+	Short: "stargazer: CLI to fetch GitHub repositories statistics",
+	Long:  "stargazer: CLI to fetch GitHub repositories statistics",
 	Run: func(cmd *cobra.Command, args []string) {
-		var repos = getRepoList("gennaro-tedesco")
-		getStars(repos)
-		getForks(repos)
+		var repos = getRepoList(args[0])
 		getUrl(repos)
 	},
 }
 
 func Execute() {
 	cobra.CheckErr(rootCmd.Execute())
+}
+
+func init() {
+	rootCmd.PersistentFlags().BoolP("sort", "s", false, "sort repositories by feature counts")
 }
