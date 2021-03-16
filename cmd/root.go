@@ -1,3 +1,5 @@
+// this file contains the command line interface for the application
+
 package cmd
 
 import (
@@ -16,7 +18,7 @@ var rootCmd = &cobra.Command{
 	Short: "list github repositories with star count",
 	Long: "list github repositories with star count",
 	Run: func(cmd *cobra.Command, args []string) {
-		getRepoList("gennaro-tedesco")
+		getStars("gennaro-tedesco")
 	},
 }
 

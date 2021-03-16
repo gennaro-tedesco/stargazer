@@ -9,14 +9,22 @@ import (
 
 type RepoJson struct {
 	Forks int `json:"forks"`
-	FullName string `json:"full_name"`
+	Stars int `json:"stargazers_count"`
+	Name string `json:"name"`
 }
 
-func getRepoList(user_name string)  {
-	user_url := "https://api.github.com/users/" + user_name + "/repos"
+func getStars(userName string) {
+	var repos = getRepoList(userName)
+	for _, repo := range repos {
+		fmt.Printf("%v: %v stars\n", repo.Name, repo.Stars)
+	}
+}
+
+func getRepoList(userName string) []RepoJson {
+	userUrl := "https://api.github.com/users/" + userName + "/repos"
 	request, err := http.NewRequest(
 		http.MethodGet,
-		user_url,
+		userUrl,
 		nil,
 	)
 	if err != nil {
@@ -38,6 +46,6 @@ func getRepoList(user_name string)  {
 		fmt.Println("could not return unmarshall: %v", err)
 	}
 
-	fmt.Println(repos)
+	return repos
 }
 
