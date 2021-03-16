@@ -4,11 +4,11 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// forksCmd represents the forks command
 var forksCmd = &cobra.Command{
 	Use:   "forks",
-	Short: "A brief description of your command",
-	Long: "A longer description that spans multiple lines and likely contains examples",
+	Args:  cobra.ExactArgs(1),
+	Short: "forks count per repository",
+	Long:  "list user's GitHub repositories with corresponding forks count",
 	Run: func(cmd *cobra.Command, args []string) {
 		repos := getRepoList(args[0])
 		sort, _ := cmd.Flags().GetBool("sort")

@@ -13,7 +13,7 @@ type RepoJson struct {
 	Name   string `json:"name"`
 	Stars  int    `json:"stargazers_count"`
 	Forks  int    `json:"forks"`
-	SvnUrl string `json:"svn_url"`
+	HtmlUrl string `json:"html_url"`
 }
 
 func getStars(repos []RepoJson, sort bool) {
@@ -28,7 +28,7 @@ func getStars(repos []RepoJson, sort bool) {
 	t.AppendSeparator()
 	t.SetStyle(table.StyleLight)
 	if sort {
-		t.SortBy([]SortBy{{Name: "stars", Mode: table.AscNumeric}})
+		t.SortBy([]table.SortBy{{Name: "stars", Mode: table.DscNumeric}})
 	}
 	t.Render()
 }
@@ -44,6 +44,9 @@ func getForks(repos []RepoJson, sort bool) {
 	}
 	t.AppendSeparator()
 	t.SetStyle(table.StyleLight)
+	if sort {
+		t.SortBy([]table.SortBy{{Name: "forks", Mode: table.DscNumeric}})
+	}
 	t.Render()
 }
 
@@ -53,7 +56,7 @@ func getUrl(repos []RepoJson) {
 	t.AppendHeader(table.Row{"name", "url"})
 	for _, repo := range repos {
 		t.AppendRows([]table.Row{
-			{repo.Name, repo.SvnUrl},
+			{repo.Name, repo.HtmlUrl},
 		})
 	}
 	t.AppendSeparator()
