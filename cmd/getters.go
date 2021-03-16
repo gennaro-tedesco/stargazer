@@ -1,23 +1,33 @@
 package cmd
 
 import (
+	"encoding/json"
 	"fmt"
+	"github.com/jedib0t/go-pretty/v6/table"
 	"io/ioutil"
 	"net/http"
-	"encoding/json"
+	"os"
 )
 
 type RepoJson struct {
-	Forks int `json:"forks"`
-	Stars int `json:"stargazers_count"`
-	Name string `json:"name"`
+	Forks int    `json:"forks"`
+	Stars int    `json:"stargazers_count"`
+	Name  string `json:"name"`
 }
 
 func getStars(userName string) {
 	var repos = getRepoList(userName)
-	for _, repo := range repos {
-		fmt.Printf("%v: %v stars\n", repo.Name, repo.Stars)
+	t := table.NewWriter()
+    t.SetOutputMirror(os.Stdout)
+    t.AppendHeader(table.Row{"Repo name", "Repo stars"})
+	for _, repo := range repos{
+		t.AppendRows([]table.Row{
+			{repo.Name, repo.Stars},
+		})
 	}
+    t.AppendSeparator()
+	t.SetStyle(table.StyleLight)
+    t.Render()
 }
 
 func getRepoList(userName string) []RepoJson {
@@ -42,10 +52,9 @@ func getRepoList(userName string) []RepoJson {
 	}
 
 	var repos []RepoJson
-	if err := json.Unmarshal(responseBytes, &repos); err!=nil {
+	if err := json.Unmarshal(responseBytes, &repos); err != nil {
 		fmt.Println("could not return unmarshall: %v", err)
 	}
 
 	return repos
 }
-
