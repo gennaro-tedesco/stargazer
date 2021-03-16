@@ -10,6 +10,7 @@ var rootCmd = &cobra.Command{
 	Short: "stargazer: CLI to fetch GitHub repositories statistics",
 	Long:  "stargazer: CLI to fetch GitHub repositories statistics",
 	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println("ciao")
 		var repos = getRepoList(args[0])
 		getUrl(repos)
 	},
