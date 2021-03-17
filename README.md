@@ -10,7 +10,6 @@
 <p align="center">
   <a href="#Installation">Installation</a> •
   <a href="#Usage">Usage</a> •
-  <a href="#Customisation">Customisation</a> •
   <a href="#Feedback">Feedback</a>
 </p>
 
