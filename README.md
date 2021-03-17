@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img width="300" height="300" src="img/logo.png">
+  <img width="200" height="200" src="img/logo.png">
   <br>
   stargazer
   <br>
