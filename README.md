@@ -1,5 +1,9 @@
 <h1 align="center">
+  <br>
+  <img width="300" height="300" src="img/logo.png">
+  <br>
   stargazer
+  <br>
 </h1>
 
 <h4 align="center">list GitHub repositories with :star: counts</h4>
