@@ -10,43 +10,26 @@ import (
 )
 
 type RepoJson struct {
-	Name   string `json:"name"`
-	Stars  int    `json:"stargazers_count"`
-	Forks  int    `json:"forks"`
-	HtmlUrl string `json:"html_url"`
+	Name     string `json:"name"`
+	Stars    int    `json:"stargazers_count"`
+	Forks    int    `json:"forks"`
+	HtmlUrl  string `json:"html_url"`
 	Language string `json:"language"`
 }
 
-func getStars(repos []RepoJson, sort bool) {
+func getStats(repos []RepoJson, sort bool) {
 	t := table.NewWriter()
 	t.SetOutputMirror(os.Stdout)
-	t.AppendHeader(table.Row{"name", "stars"})
+	t.AppendHeader(table.Row{"name", "stars", "forks"})
 	for _, repo := range repos {
 		t.AppendRows([]table.Row{
-			{repo.Name, repo.Stars},
+			{repo.Name, repo.Stars, repo.Forks},
 		})
 	}
 	t.AppendSeparator()
 	t.SetStyle(table.StyleLight)
 	if sort {
 		t.SortBy([]table.SortBy{{Name: "stars", Mode: table.DscNumeric}})
-	}
-	t.Render()
-}
-
-func getForks(repos []RepoJson, sort bool) {
-	t := table.NewWriter()
-	t.SetOutputMirror(os.Stdout)
-	t.AppendHeader(table.Row{"name", "forks"})
-	for _, repo := range repos {
-		t.AppendRows([]table.Row{
-			{repo.Name, repo.Forks},
-		})
-	}
-	t.AppendSeparator()
-	t.SetStyle(table.StyleLight)
-	if sort {
-		t.SortBy([]table.SortBy{{Name: "forks", Mode: table.DscNumeric}})
 	}
 	t.Render()
 }
