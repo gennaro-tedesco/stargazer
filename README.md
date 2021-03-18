@@ -13,7 +13,7 @@
   <a href="#Feedback">Feedback</a>
 </p>
 
-Retrieve GitHub statistics per username easily from the command line: no need to open the browser anymore!
+Retrieve GitHub statistics per username from the command line: no need to open the browser anymore!
 
 ![](img/demo.gif)
 
@@ -26,11 +26,10 @@ go get -u -v github.com/gennaro-tedesco/stargazer
 ## Usage
 `stargazer` requires a mandatory argument as GitHub username and exposes the following commands:
 
-| command | example usage                 | flags
-|:------- |:----------------------------- |:----------------
-| stars   | stargazer stars neovim        | --sort
-| forks   | stargazer forks tpope         | --sort
-| url     | stargazer url gennaro-tedesco |
+| command | example usage                 | flags  | description
+|:------- |:----------------------------- |:------ |:------------
+| stats   | stargazer stats neovim        | --sort | list stars and forks per repository
+| url     | stargazer url gennaro-tedesco |        | list repositories url and main language
 
 the general grammar being `stargazer <cmd> username --flag`. See `stargazer help` for details.
 

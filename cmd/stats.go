@@ -4,18 +4,18 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var forksCmd = &cobra.Command{
-	Use:   "forks",
+var statsCmd = &cobra.Command{
+	Use:   "stats",
 	Args:  cobra.ExactArgs(1),
-	Short: "forks count per repository",
-	Long:  "list user's GitHub repositories with corresponding forks count",
+	Short: "stats counts per repository",
+	Long: "list user's github repositories showing number of stars and forks",
 	Run: func(cmd *cobra.Command, args []string) {
 		repos := getRepoList(args[0])
 		sort, _ := cmd.Flags().GetBool("sort")
-		getForks(repos, sort)
+		getStats(repos, sort)
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(forksCmd)
+	rootCmd.AddCommand(statsCmd)
 }
