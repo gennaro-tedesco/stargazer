@@ -28,8 +28,8 @@ go get -u -v github.com/gennaro-tedesco/stargazer
 
 | command | example usage                 | flags  | description
 |:------- |:----------------------------- |:------ |:------------
-| stats   | stargazer stats neovim        | --sort | lists stars and forks per repository
-| url     | stargazer url gennaro-tedesco |        | lists repositories url and main language
+| stats   | stargazer stats neovim        | --sort | list stars and forks per repository
+| url     | stargazer url gennaro-tedesco |        | list repositories url and main language
 
 the general grammar being `stargazer <cmd> username --flag`. See `stargazer help` for details.
 
