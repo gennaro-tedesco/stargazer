@@ -29,7 +29,7 @@ func getStats(repos []RepoJson, sort bool) {
 	t.AppendSeparator()
 	t.SetStyle(table.StyleLight)
 	if sort {
-		t.SortBy([]table.SortBy{{Name: "stars", Mode: table.Dsc}, {Name: "forks", Mode: table.Dsc}})
+		t.SortBy([]table.SortBy{{Name: "stars", Mode: table.DscNumeric}, {Name: "forks", Mode: table.DscNumeric}})
 	}
 	t.Render()
 }
