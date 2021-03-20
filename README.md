@@ -6,6 +6,15 @@
   <br>
 </h1>
 
+<p align="center">
+  <a href="http://makeapullrequest.com">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square">
+  </a>
+  <a href="https://github.com/gennaro-tedesco/stargazer/releases">
+    <img src="https://img.shields.io/github/release/gennaro-tedesco/stargazer">
+  </a>
+</p>
+
 <h4 align="center">list GitHub repositories with :star: counts</h4>
 <p align="center">
   <a href="#Installation">Installation</a> •
