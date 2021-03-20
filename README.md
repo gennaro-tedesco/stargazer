@@ -6,21 +6,18 @@
   <br>
 </h1>
 
-<p align="center">
-  <a href="http://makeapullrequest.com">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square">
-  </a>
-  <a href="https://github.com/gennaro-tedesco/stargazer/releases">
-    <img src="https://img.shields.io/github/release/gennaro-tedesco/stargazer">
-  </a>
-</p>
+<h2 align="center">
+  <img alt="PR" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat"/>
+  <img alt="Go" src="https://img.shields.io/badge/go-%2300ADD8.svg?&style=flat&logo=go&logoColor=white"/>
+  <img alt="releases" src="https://img.shields.io/github/release/gennaro-tedesco/stargazer"/>
+</h2>
 
 <h4 align="center">list GitHub repositories with :star: counts</h4>
-<p align="center">
+<h3 align="center">
   <a href="#Installation">Installation</a> •
   <a href="#Usage">Usage</a> •
   <a href="#Feedback">Feedback</a>
-</p>
+</h3>
 
 Retrieve GitHub statistics per username from the command line: no need to open the browser anymore!
 
