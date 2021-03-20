@@ -6,11 +6,14 @@
   <br>
 </h1>
 
-
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/gennaro-tedesco/stargazer/blob/main/LICENSE)
-[![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://github.com/gennaro-tedesco/stargazer/releases)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
-
+<p align="center">
+  <a href="http://makeapullrequest.com">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square">
+  </a>
+  <a href="https://github.com/gennaro-tedesco/stargazer/releases">
+    <img src="https://img.shields.io/github/release/gennaro-tedesco/stargazer">
+  </a>
+</p>
 
 <h4 align="center">list GitHub repositories with :star: counts</h4>
 <p align="center">
