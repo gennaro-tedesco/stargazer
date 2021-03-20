@@ -5,11 +5,11 @@
   stargazer
   <br>
 </h1>
-<p align="center">
-  [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/gennaro-tedesco/stargazer/blob/main/LICENSE)
-  [![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://github.com/gennaro-tedesco/stargazer/releases)
-  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
-</p>
+
+
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/gennaro-tedesco/stargazer/blob/main/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://github.com/gennaro-tedesco/stargazer/releases)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
 
 
 <h4 align="center">list GitHub repositories with :star: counts</h4>
