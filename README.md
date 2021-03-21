@@ -7,10 +7,10 @@
 </h1>
 
 <h2 align="center">
-  <a href="javascript:void(0)">
+  <a href="#" onClick="return false;"">
     <img alt="PR" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat"/>
   </a>
-  <a href="javascript:void(0)">
+  <a href="#" onClick="return false;"">
     <img alt="Go" src="https://img.shields.io/badge/go-%2300ADD8.svg?&style=flat&logo=go&logoColor=white"/>
   </a>
   <a href="https://github.com/gennaro-tedesco/stargazer/releases">
