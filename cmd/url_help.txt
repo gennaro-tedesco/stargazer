@@ -1,0 +1,7 @@
+list user's github repositories with corresponding complete urls
+
+Usage:
+  stargazer url [username]
+
+Flags:
+  -h, --help   help for url

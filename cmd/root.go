@@ -1,6 +1,9 @@
 package cmd
 
 import (
+	"io/ioutil"
+	"log"
+
 	"github.com/spf13/cobra"
 )
 
@@ -17,4 +20,17 @@ var rootCmd = &cobra.Command{
 
 func Execute() {
 	cobra.CheckErr(rootCmd.Execute())
+}
+
+func init() {
+	rootCmd.SetHelpTemplate(GetHelpText("help.txt"))
+}
+
+func GetHelpText(filename string) string {
+	content, err := ioutil.ReadFile(filename)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return string(content)
 }
