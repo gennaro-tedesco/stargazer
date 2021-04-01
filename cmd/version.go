@@ -6,12 +6,14 @@ import (
 	"github.com/spf13/cobra"
 )
 
+const VERSION = "1.0.3"
+
 var versionCmd = &cobra.Command{
 	Use:   "version",
 	Short: "print current stargazer version",
 	Long: "print current stargazer version",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("1.0.3")
+		fmt.Println(VERSION)
 	},
 }
 
