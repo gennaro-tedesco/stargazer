@@ -18,6 +18,19 @@ var statsCmd = &cobra.Command{
 
 func init() {
 	statsCmd.Flags().BoolP("sort", "s", true, "sort repositories by feature counts")
-	statsCmd.SetHelpTemplate(GetHelpText("cmd/stats_help.txt"))
+	statsCmd.SetHelpTemplate(GetStatsHelp())
 	rootCmd.AddCommand(statsCmd)
+}
+
+func GetStatsHelp() string {
+	return `
+list user's github repositories showing number of stars and forks
+
+Usage:
+  stargazer stats [username] [flags]
+
+Flags:
+  -h, --help   help for stats
+  -s, --sort   sort repositories by feature counts (default true)
+`
 }
