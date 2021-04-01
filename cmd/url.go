@@ -16,5 +16,6 @@ var urlCmd = &cobra.Command{
 }
 
 func init() {
+	urlCmd.SetHelpTemplate(GetHelpText("cmd/url_help.txt"))
 	rootCmd.AddCommand(urlCmd)
 }
