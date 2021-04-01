@@ -7,9 +7,12 @@ Usage:
   stargazer [command] username [flag]
 
 Available Commands:
-  help        Help about any command
   stats       stats counts per repository
   url         repositories urls
+
+Help commands:
+  help        help about any command
+  version     prints current version
 
 Flags:
   -h, --help   help for stargazer

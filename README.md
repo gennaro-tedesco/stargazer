@@ -43,7 +43,7 @@ go get -u -v github.com/gennaro-tedesco/stargazer
 | stats   | stargazer stats neovim        | --sort | list stars and forks per repository
 | url     | stargazer url gennaro-tedesco |        | list repositories url and main language
 
-the general grammar being `stargazer <cmd> username --flag`. See `stargazer --help` for details.
+the general grammar being `stargazer <cmd> username --flag`. See `stargazer help` for details.
 
 ## Feedback
 If you find this application useful consider awarding it a ⭐, it is a great way to give feedback! Otherwise, any additional suggestions or merge request is warmly welcome!
