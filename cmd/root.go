@@ -1,9 +1,6 @@
 package cmd
 
 import (
-	"io/ioutil"
-	"log"
-
 	"github.com/spf13/cobra"
 )
 
@@ -23,14 +20,30 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.SetHelpTemplate(GetHelpText("help.txt"))
+	rootCmd.SetHelpTemplate(GetRootHelp())
 }
 
-func GetHelpText(filename string) string {
-	content, err := ioutil.ReadFile(filename)
-	if err != nil {
-		log.Fatal(err)
-	}
+func GetRootHelp() string {
+	return `
+stargazer: retrieve statistics of github repositories
 
-	return string(content)
+Arguments:
+  username    github username to retrieve statistics of
+
+Usage:
+  stargazer [command] username [flag]
+
+Available Commands:
+  stats       stats counts per repository
+  url         repositories urls
+
+Help commands:
+  help        help about any command
+  version     prints current version
+
+Flags:
+  -h, --help   help for stargazer
+
+Use "stargazer [command] --help" for more information about a command.
+`
 }

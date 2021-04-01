@@ -16,6 +16,18 @@ var urlCmd = &cobra.Command{
 }
 
 func init() {
-	urlCmd.SetHelpTemplate(GetHelpText("cmd/url_help.txt"))
+	urlCmd.SetHelpTemplate(GetUrlHelp())
 	rootCmd.AddCommand(urlCmd)
+}
+
+func GetUrlHelp() string {
+	return `
+list user's github repositories with corresponding complete urls
+
+Usage:
+  stargazer url [username]
+
+Flags:
+  -h, --help   help for url
+`
 }
