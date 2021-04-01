@@ -11,7 +11,7 @@ var versionCmd = &cobra.Command{
 	Short: "print current stargazer version",
 	Long: "print current stargazer version",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("1.0.2")
+		fmt.Println("1.0.3")
 	},
 }
 
