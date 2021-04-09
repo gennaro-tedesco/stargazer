@@ -8,7 +8,7 @@ var statsCmd = &cobra.Command{
 	Use:   "stats",
 	Args:  cobra.ExactArgs(1),
 	Short: "stats counts per repository",
-	Long: "list user's github repositories showing number of stars and forks",
+	Long:  "list user's github repositories showing number of stars and forks",
 	Run: func(cmd *cobra.Command, args []string) {
 		repos := getRepoList(args[0])
 		sort, _ := cmd.Flags().GetBool("sort")
@@ -18,11 +18,11 @@ var statsCmd = &cobra.Command{
 
 func init() {
 	statsCmd.Flags().BoolP("sort", "s", true, "sort repositories by feature counts")
-	statsCmd.SetHelpTemplate(GetStatsHelp())
+	statsCmd.SetHelpTemplate(getStatsHelp())
 	rootCmd.AddCommand(statsCmd)
 }
 
-func GetStatsHelp() string {
+func getStatsHelp() string {
 	return `
 list user's github repositories showing number of stars and forks
 

@@ -8,7 +8,7 @@ var urlCmd = &cobra.Command{
 	Use:   "url",
 	Args:  cobra.ExactArgs(1),
 	Short: "repositories urls",
-	Long: "list user's GitHub repositories with corresponding complete urls",
+	Long:  "list user's GitHub repositories with corresponding complete urls",
 	Run: func(cmd *cobra.Command, args []string) {
 		repos := getRepoList(args[0])
 		getUrl(repos)
@@ -16,11 +16,11 @@ var urlCmd = &cobra.Command{
 }
 
 func init() {
-	urlCmd.SetHelpTemplate(GetUrlHelp())
+	urlCmd.SetHelpTemplate(getUrlHelp())
 	rootCmd.AddCommand(urlCmd)
 }
 
-func GetUrlHelp() string {
+func getUrlHelp() string {
 	return `
 list user's github repositories with corresponding complete urls
 
