@@ -20,10 +20,10 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.SetHelpTemplate(GetRootHelp())
+	rootCmd.SetHelpTemplate(getRootHelp())
 }
 
-func GetRootHelp() string {
+func getRootHelp() string {
 	return `
 stargazer: retrieve statistics of github repositories
 

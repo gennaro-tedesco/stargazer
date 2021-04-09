@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+
 	"github.com/jedib0t/go-pretty/v6/table"
 )
 
