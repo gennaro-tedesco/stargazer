@@ -22,11 +22,14 @@ func getStats(repos []RepoJson, sort bool) {
 	t := table.NewWriter()
 	t.SetOutputMirror(os.Stdout)
 	t.AppendHeader(table.Row{"name", "stars", "forks"})
+	total := 0
 	for _, repo := range repos {
 		t.AppendRows([]table.Row{
 			{repo.Name, repo.Stars, repo.Forks},
 		})
+		total += repo.Stars
 	}
+	t.AppendFooter(table.Row{"Total", total, ""})
 	t.AppendSeparator()
 	t.SetStyle(table.StyleLight)
 	if sort {
