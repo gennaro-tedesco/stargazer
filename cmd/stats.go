@@ -17,7 +17,7 @@ var statsCmd = &cobra.Command{
 }
 
 func init() {
-	statsCmd.Flags().BoolP("sort", "s", true, "sort repositories by feature counts")
+	statsCmd.Flags().BoolP("sort", "s", true, "sort repositories by stars counts")
 	statsCmd.SetHelpTemplate(getStatsHelp())
 	rootCmd.AddCommand(statsCmd)
 }
