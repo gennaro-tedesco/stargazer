@@ -27,7 +27,7 @@
 
 Retrieve GitHub statistics per username from the command line: no need to open the browser anymore!
 
-![](img/demo.gif)
+![demo](https://user-images.githubusercontent.com/15387611/117467268-d378fc80-af53-11eb-844e-4057651246a8.gif)
 
 ## Installation
 Go get it!

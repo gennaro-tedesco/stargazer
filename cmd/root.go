@@ -38,7 +38,7 @@ Usage:
 Available Commands:
   stats       stats counts per repository
   url         repositories urls
-			  (empty): combined dashboard of urls and stars
+              (empty): combined dashboard of urls and stars
 
 Help commands:
   help        help about any command
