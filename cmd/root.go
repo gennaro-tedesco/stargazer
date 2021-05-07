@@ -10,7 +10,7 @@ var rootCmd = &cobra.Command{
 	Short: "stargazer: retrieve github statistics",
 	Long:  "stargazer: CLI to retrieve statistics of github repositories",
 	Run: func(cmd *cobra.Command, args []string) {
-		var repos = getRepoList(args[0])
+		var repos = getRepoList(args[0], true)
 		sort, _ := cmd.Flags().GetBool("sort")
 		getDashboard(repos, sort)
 	},
@@ -38,6 +38,7 @@ Usage:
 Available Commands:
   stats       stats counts per repository
   url         repositories urls
+  starred     user's starred repositories
               (empty): combined dashboard of urls and stars
 
 Help commands:

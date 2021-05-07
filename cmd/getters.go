@@ -69,8 +69,13 @@ func getDashboard(repos []RepoJson, sort bool) {
 	t.Render()
 }
 
-func getRepoList(userName string) []RepoJson {
-	userUrl := "https://api.github.com/users/" + userName + "/repos?page=1&per_page=100"
+func getRepoList(userName string, self bool) []RepoJson {
+	var userUrl string
+	if self {
+		userUrl = "https://api.github.com/users/" + userName + "/repos?page=1&per_page=100"
+	} else {
+		userUrl = "https://api.github.com/users/" + userName + "/starred?page=1&per_page=100"
+	}
 	request, err := http.NewRequest(
 		http.MethodGet,
 		userUrl,

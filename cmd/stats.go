@@ -10,7 +10,7 @@ var statsCmd = &cobra.Command{
 	Short: "stats counts per repository",
 	Long:  "list user's github repositories showing number of stars and forks",
 	Run: func(cmd *cobra.Command, args []string) {
-		repos := getRepoList(args[0])
+		repos := getRepoList(args[0], true)
 		sort, _ := cmd.Flags().GetBool("sort")
 		getStats(repos, sort)
 	},
@@ -27,10 +27,10 @@ func getStatsHelp() string {
 list user's github repositories showing number of stars and forks
 
 Usage:
-  stargazer stats [username] [flags]
+  stargazer stats username [flags]
 
 Flags:
   -h, --help   help for stats
-  -s, --sort   sort repositories by feature counts (default true)
+  -s, --sort   sort repositories by stars counts (default true)
 `
 }
