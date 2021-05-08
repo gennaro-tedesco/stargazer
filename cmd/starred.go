@@ -28,6 +28,6 @@ Usage:
   stargazer starred username
 
 Flags:
-  -h, --help   help for stats
+  -h, --help   open this help page
 `
 }

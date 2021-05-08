@@ -28,6 +28,6 @@ Usage:
   stargazer url username
 
 Flags:
-  -h, --help   help for url
+  -h, --help   open this help page
 `
 }

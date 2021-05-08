@@ -30,7 +30,7 @@ Usage:
   stargazer stats username [flags]
 
 Flags:
-  -h, --help   help for stats
+  -h, --help   open this help page
   -s, --sort   sort repositories by stars counts (default true)
 `
 }
