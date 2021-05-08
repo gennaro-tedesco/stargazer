@@ -10,7 +10,7 @@ var urlCmd = &cobra.Command{
 	Short: "repositories urls",
 	Long:  "list user's GitHub repositories with corresponding complete urls",
 	Run: func(cmd *cobra.Command, args []string) {
-		repos := getRepoList(args[0])
+		repos := getRepoList(args[0], true)
 		getUrl(repos)
 	},
 }
@@ -25,9 +25,9 @@ func getUrlHelp() string {
 list user's github repositories with corresponding complete urls
 
 Usage:
-  stargazer url [username]
+  stargazer url username
 
 Flags:
-  -h, --help   help for url
+  -h, --help   open this help page
 `
 }

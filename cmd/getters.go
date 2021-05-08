@@ -52,8 +52,30 @@ func getUrl(repos []RepoJson) {
 	t.Render()
 }
 
-func getRepoList(userName string) []RepoJson {
-	userUrl := "https://api.github.com/users/" + userName + "/repos?page=1&per_page=100"
+func getDashboard(repos []RepoJson, sort bool) {
+	t := table.NewWriter()
+	t.SetOutputMirror(os.Stdout)
+	t.AppendHeader(table.Row{"name", "url", "main language", "stars", "forks"})
+	for _, repo := range repos {
+		t.AppendRows([]table.Row{
+			{repo.Name, repo.HtmlUrl, repo.Language, repo.Stars, repo.Forks},
+		})
+	}
+	t.AppendSeparator()
+	t.SetStyle(table.StyleLight)
+	if sort {
+		t.SortBy([]table.SortBy{{Name: "stars", Mode: table.DscNumeric}, {Name: "forks", Mode: table.DscNumeric}})
+	}
+	t.Render()
+}
+
+func getRepoList(userName string, self bool) []RepoJson {
+	var userUrl string
+	if self {
+		userUrl = "https://api.github.com/users/" + userName + "/repos?page=1&per_page=100"
+	} else {
+		userUrl = "https://api.github.com/users/" + userName + "/starred?page=1&per_page=100"
+	}
 	request, err := http.NewRequest(
 		http.MethodGet,
 		userUrl,
