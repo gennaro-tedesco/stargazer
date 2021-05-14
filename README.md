@@ -38,12 +38,13 @@ go get github.com/gennaro-tedesco/stargazer
 ## Usage
 `stargazer` requires a mandatory argument as GitHub username and exposes the following commands:
 
-| command | example usage                 | flags  | description
-|:------- |:----------------------------- |:------ |:------------
-| stats   | stargazer stats neovim        | --sort | list stars and forks per repository
-| url     | stargazer url gennaro-tedesco |        | list repositories url and main language
-| starred | stargazer starred username    |        | list your starred repositories
-|         | stargazer gennaro-tedesco     | --sort | list urls and stars dashboard together
+| command | example usage              | flags  | description
+|:------- |:-------------------------- |:------ |:------------
+| stats   | stargazer stats username   | --sort | list stars and forks per repository
+| url     | stargazer url username     |        | list repositories url and main language
+| list    | stargazer list username    |        | list repositories names and descriptions
+| starred | stargazer starred userna   |        | list your starred repositories
+|         | stargazer username         | --sort | list urls and stars dashboard together
 
 the general grammar being `stargazer <cmd> username --flag`. See `stargazer help` for details.
 

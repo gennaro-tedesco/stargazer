@@ -11,11 +11,12 @@ import (
 )
 
 type RepoJson struct {
-	Name     string `json:"name"`
-	Stars    int    `json:"stargazers_count"`
-	Forks    int    `json:"forks"`
-	HtmlUrl  string `json:"html_url"`
-	Language string `json:"language"`
+	Name        string `json:"name"`
+	Description string `json:"description"`
+	Stars       int    `json:"stargazers_count"`
+	Forks       int    `json:"forks"`
+	HtmlUrl     string `json:"html_url"`
+	Language    string `json:"language"`
 }
 
 func getStats(repos []RepoJson, sort bool) {
@@ -45,6 +46,20 @@ func getUrl(repos []RepoJson) {
 	for _, repo := range repos {
 		t.AppendRows([]table.Row{
 			{repo.Name, repo.HtmlUrl, repo.Language},
+		})
+	}
+	t.AppendSeparator()
+	t.SetStyle(table.StyleLight)
+	t.Render()
+}
+
+func getList(repos []RepoJson) {
+	t := table.NewWriter()
+	t.SetOutputMirror(os.Stdout)
+	t.AppendHeader(table.Row{"name", "description"})
+	for _, repo := range repos {
+		t.AppendRows([]table.Row{
+			{repo.Name, repo.Description},
 		})
 	}
 	t.AppendSeparator()
