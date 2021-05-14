@@ -38,6 +38,7 @@ Usage:
 Available Commands:
   stats       stats counts per repository
   url         repositories urls
+  list        repositories names and descriptions
   starred     user's starred repositories
               (empty): combined dashboard of urls and stars
 
