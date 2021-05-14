@@ -8,6 +8,7 @@ import (
 	"os"
 
 	"github.com/jedib0t/go-pretty/v6/table"
+	"golang.org/x/term"
 )
 
 type RepoJson struct {
@@ -57,6 +58,12 @@ func getList(repos []RepoJson) {
 	t := table.NewWriter()
 	t.SetOutputMirror(os.Stdout)
 	t.AppendHeader(table.Row{"name", "description"})
+
+	width, _, _ := term.GetSize(0)
+	t.SetColumnConfigs([]table.ColumnConfig{
+		{Name: "name", WidthMax: width / 3},
+		{Name: "description", WidthMax: 2 * width / 3},
+	})
 	for _, repo := range repos {
 		t.AppendRows([]table.Row{
 			{repo.Name, repo.Description},
@@ -65,6 +72,7 @@ func getList(repos []RepoJson) {
 	t.AppendSeparator()
 	t.SetStyle(table.StyleLight)
 	t.Render()
+
 }
 
 func getDashboard(repos []RepoJson, sort bool) {

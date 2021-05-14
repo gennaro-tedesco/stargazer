@@ -7,4 +7,5 @@ require (
 	github.com/spf13/cobra v1.1.3
 	github.com/stretchr/testify v1.4.0 // indirect
 	golang.org/x/sys v0.0.0-20210324051608-47abb6519492 // indirect
+	golang.org/x/term v0.0.0-20210503060354-a79de5458b56
 )
