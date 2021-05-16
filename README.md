@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img width="200" height="200" src="img/stargazer-logo.png">
+  <img width="200" height="200" src="stargazer-logo.png">
   <br>
   stargazer
   <br>
@@ -27,7 +27,7 @@
 
 Retrieve GitHub statistics per username from the command line: no need to open the browser anymore!
 
-![demo](img/demo.gif)
+![demo](https://user-images.githubusercontent.com/15387611/118392199-a2c25280-b638-11eb-8845-17c98f307e82.gif)
 
 ## Installation
 Go get it!
