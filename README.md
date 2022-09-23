@@ -32,7 +32,7 @@ Retrieve GitHub statistics per username from the command line: no need to open t
 ## Installation
 Go get it!
 ```
-go get github.com/gennaro-tedesco/stargazer
+go install github.com/gennaro-tedesco/stargazer@latest
 ```
 
 ## Usage
